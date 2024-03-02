@@ -8,8 +8,8 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-        // Method called by the program class the execute initial 3 die rolls
-        public int[] ExcecuteInitialDiceRolls()
+        // Method called by the owning class to roll the initial 3 die
+        private int[] ExcecuteInitialDiceRolls()
         {
             //Create an array to store the results of the die rolls
             int[] ResultArray = new int[3];
@@ -27,6 +27,7 @@ namespace CMP1903_A1_2324
             return ResultArray;
         }
 
+        // Method called by program class to roll the initial 3 die and log the results
         public void LogInitialDiceRollResults()
         {
             int[] ResultArray = ExcecuteInitialDiceRolls();
@@ -46,8 +47,8 @@ namespace CMP1903_A1_2324
         // List to hold any futher roll values the user initiates 
         List<int> FurtherRollsList = new List<int>();
 
-        // Method called by program class to execute a singular die roll if player requests 
-        public int ExcecuteFurtherDiceRolls()
+        // Method called by owning class to execute a futher die roll
+        private int ExcecuteFurtherDiceRolls()
         {
             // Create one instance of the die class
             Die CurrentDie = new Die();
@@ -62,6 +63,7 @@ namespace CMP1903_A1_2324
             return CurrentDie.CurrentValue;
         }
 
+        // Method called by program class to execute a singular die roll and log the result
         public void LogFutherDiceRolls()
         {
             // Call the ExcecuteFurtherDiceRolls method and log the result to console
