@@ -27,6 +27,11 @@ namespace CMP1903_A1_2324
             return ResultArray;
         }
 
+        public int[] GetExcecuteInitialDiceRolls()
+        {
+            return ExcecuteInitialDiceRolls();
+        }
+
         // Method called by program class to roll the initial 3 die and log the results
         public void LogInitialDiceRollResults()
         {
@@ -61,6 +66,11 @@ namespace CMP1903_A1_2324
 
             // Return the current value of the die we just rolled
             return CurrentDie.CurrentValue;
+        }
+
+        public int GetExcecuteFurtherDiceRolls()
+        {
+            return ExcecuteFurtherDiceRolls();
         }
 
         // Method called by program class to execute a singular die roll and log the result

@@ -17,13 +17,13 @@ namespace CMP1903_A1_2324
             // Test ExecuteInitialDiceRolls method to check for valid return types
             Console.WriteLine("Testing ExecuteInitialDiceRolls method");
 
-            int[] initialRollResults = game.ExcecuteInitialDiceRolls();
+            int[] initialRollResults = game.GetExcecuteInitialDiceRolls();
           
             Debug.Assert(initialRollResults.Length == 3, "ERROR ExecuteInitialDiceRolls did not return correct array length");
 
             // Test ExecuteFurtherDiceRolls method to check for valid return types
             Console.WriteLine("Testing ExecuteFurtherDiceRolls method");
-            int furtherRollResult = game.ExcecuteFurtherDiceRolls();
+            int furtherRollResult = game.GetExcecuteFurtherDiceRolls();
 
             Debug.Assert(furtherRollResult >= 1 && furtherRollResult <= 6, "ERROR Further die roll result out of range 1-6.");
 
